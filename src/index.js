@@ -7,7 +7,7 @@ const Votes = () => {
   };
   return (
     <div>
-      <h2>{votes} Votes</h2>
+      <h2>{votes} Votes by Michael</h2>
       <p>
         <button onClick={addVote}>Vote!</button>
       </p>
