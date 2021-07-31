@@ -14,4 +14,4 @@ const Votes = () => {
     </div>
   );
 };
-render(<Votes />, document.getElementById(`react-app`));
+render(<Votes />, document.getElementById(`react-vote-app`));

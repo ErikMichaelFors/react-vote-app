@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: React Template
+ * Template Name: React Vote App Template
  */
 get_header();
 ?>
@@ -11,7 +11,7 @@ get_header();
 		<div class="post-inner thin">
 			<div class="entry-content">				
 
-				<div id="react-app"></div><!-- #react-app -->
+				<div id="react-vote-app"></div><!-- #react-app -->
 
 			</div><!-- .entry-content -->
 		</div><!-- .post-inner -->

@@ -115,7 +115,7 @@ const Votes = () => {
   }, "Vote!")));
 };
 
-render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Votes, null), document.getElementById(`react-app`));
+render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(Votes, null), document.getElementById(`react-vote-app`));
 
 /***/ }),
 
