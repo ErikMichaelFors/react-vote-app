@@ -1,6 +1,3 @@
-//import React from 'react';
-//import ReactDOM from 'react-dom';
-//const { render, useState } = wp.element;
 import React, {Component} from 'react';
 import './tictactoe.css';
 

@@ -97,12 +97,11 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tictactoe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tictactoe */ "./src/tictactoe.js");
-/* harmony import */ var _react_vote__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./react-vote */ "./src/react-vote.js");
+/* harmony import */ var _react_tictactoe_app_tictactoe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./react-tictactoe-app/tictactoe */ "./src/react-tictactoe-app/tictactoe.js");
+/* harmony import */ var _react_vote_app_react_vote__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./react-vote-app/react-vote */ "./src/react-vote-app/react-vote.js");
 
 const {
-  render,
-  useState
+  render
 } = wp.element;
 
 
@@ -110,52 +109,17 @@ const game = document.getElementById('react-tictactoe-app');
 const votes = document.getElementById(`react-vote-app`);
 
 if (game) {
-  render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_tictactoe__WEBPACK_IMPORTED_MODULE_1__["default"], null), document.getElementById('react-tictactoe-app'));
-} else if (votes && _react_vote__WEBPACK_IMPORTED_MODULE_2__["Votes"]) {
-  console.log("VOTES");
-  render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_react_vote__WEBPACK_IMPORTED_MODULE_2__["Votes"], null), document.getElementById(`react-vote-app`));
+  render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_react_tictactoe_app_tictactoe__WEBPACK_IMPORTED_MODULE_1__["default"], null), document.getElementById('react-tictactoe-app'));
+} else if (votes) {
+  render(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_react_vote_app_react_vote__WEBPACK_IMPORTED_MODULE_2__["Votes"], null), document.getElementById(`react-vote-app`));
 }
 
 /***/ }),
 
-/***/ "./src/react-vote.js":
-/*!***************************!*\
-  !*** ./src/react-vote.js ***!
-  \***************************/
-/*! exports provided: Votes */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Votes", function() { return Votes; });
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-const {
-  useState
-} = wp.element;
-const Votes = () => {
-  const [votes, setVotes] = useState(0);
-
-  const addVote = () => {
-    setVotes(votes + 1);
-  };
-
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, votes, " Votes by Michael"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
-    className: "testing",
-    onClick: addVote
-  }, "Vote!")));
-};
-
-/***/ }),
-
-/***/ "./src/tictactoe.css":
-/*!***************************!*\
-  !*** ./src/tictactoe.css ***!
-  \***************************/
+/***/ "./src/react-tictactoe-app/tictactoe.css":
+/*!***********************************************!*\
+  !*** ./src/react-tictactoe-app/tictactoe.css ***!
+  \***********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -166,10 +130,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/tictactoe.js":
-/*!**************************!*\
-  !*** ./src/tictactoe.js ***!
-  \**************************/
+/***/ "./src/react-tictactoe-app/tictactoe.js":
+/*!**********************************************!*\
+  !*** ./src/react-tictactoe-app/tictactoe.js ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -179,11 +143,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _tictactoe_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tictactoe.css */ "./src/tictactoe.css");
+/* harmony import */ var _tictactoe_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tictactoe.css */ "./src/react-tictactoe-app/tictactoe.css");
 
-//import React from 'react';
-//import ReactDOM from 'react-dom';
-//const { render, useState } = wp.element;
 
 
 
@@ -354,6 +315,40 @@ function getMoveCordinates(square) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Game);
+
+/***/ }),
+
+/***/ "./src/react-vote-app/react-vote.js":
+/*!******************************************!*\
+  !*** ./src/react-vote-app/react-vote.js ***!
+  \******************************************/
+/*! exports provided: Votes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Votes", function() { return Votes; });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const {
+  useState
+} = wp.element;
+const Votes = () => {
+  const [votes, setVotes] = useState(0);
+
+  const addVote = () => {
+    setVotes(votes + 1);
+  };
+
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, votes, " Votes by Michael"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
+    className: "testing",
+    onClick: addVote
+  }, "Vote!")));
+};
 
 /***/ }),
 
