@@ -1,5 +1,5 @@
 <?php
- 
+
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 function enqueue_parent_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
@@ -16,10 +16,9 @@ function my_enqueue_theme_js() {
     true
   );
 }
-
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
 function my_theme_enqueue_styles() {
- 
   $parent_style = 'twentytwenty-style'; 
     
   wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
@@ -36,5 +35,12 @@ function my_theme_enqueue_styles() {
     ['wp-element'],
     time() //For production use wp_get_theme()->get('Version')        
   );
-  
 }
+
+/** My modifications [START] */
+function enqueue_my_custom_script() {
+    wp_enqueue_script( 'tictactoejs', '/src/tictactoe.js', false );
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_my_custom_script' );
+/** My modifications [END] */

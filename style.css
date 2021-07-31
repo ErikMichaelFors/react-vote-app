@@ -9,3 +9,25 @@
  Tags:         Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
  Text Domain:  GeneratePress-child
 */
+
+/* REACT VOTE APP styling [START] */
+#react-vote-app button.testing {
+    background-color: green;
+}
+/* REACT VOTE APP styling [END] */
+
+/*
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+/* REACT TICTACTOE APP styling [START] */
+#react-tictactoe-app button.testing {
+    color: red;
+}
+/* REACT TICTACTOE APP styling [END] */

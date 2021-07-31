@@ -1,17 +1,15 @@
 const { render, useState } = wp.element;
 
-const Votes = () => {
-  const [votes, setVotes] = useState(0);
-  const addVote = () => {
-    setVotes(votes + 1);
-  };
-  return (
-    <div>
-      <h2>{votes} Votes by Michael</h2>
-      <p>
-        <button onClick={addVote}>Vote!</button>
-      </p>
-    </div>
-  );
-};
-render(<Votes />, document.getElementById(`react-vote-app`));
+import Game from './tictactoe';
+import { Votes } from './react-vote';
+
+const game = document.getElementById('react-tictactoe-app');
+const votes = document.getElementById(`react-vote-app`);
+
+if (game){
+    render(<Game />,  document.getElementById('react-tictactoe-app'));
+} else if (votes && Votes){
+    console.log("VOTES");
+    render(<Votes />, document.getElementById(`react-vote-app`));
+}
+
