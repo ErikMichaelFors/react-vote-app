@@ -85,6 +85,7 @@ body {
   button.square.winning-square {
     outline: green solid 2px;
     overflow: auto;
+    outline-offset: -3px;
 }
   
   .kbd-navigation .square:focus {
@@ -92,7 +93,6 @@ body {
   }
   
   .game {
-      padding: 100px;
     display: flex;
     flex-direction: row;
   }
@@ -100,5 +100,38 @@ body {
   .game-info {
     margin-left: 20px;
   }
+
+@media screen and (max-width: 600px) {
+    div#react-tictactoe-app {
+        margin-top: 20px;
+    }
+
+    .game {
+        flex-direction: column;
+    }
+    .square {
+        width: calc((99vw - 40px) / 3);
+        height: calc((99vw - 40px) / 3);
+        box-sizing: content-box;
+    }
+
+    .status {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .toggleButton {
+        margin: 0.5em 0 0.5em 0;
+        width: 100%;
+    }
+
+    .game-info {
+        margin-left: 0px;
+    }
+
+    ol {
+        padding-left: 0px;
+      }
+}
   
 /* REACT TICTACTOE APP styling [END] */

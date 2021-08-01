@@ -136,8 +136,8 @@ function Square(props) {
             />
           </div>
           <div className="game-info">
-            <div>{status}</div>
-            <button onClick={()=>this.toggleOrder()}>{this.state.isAscending ? 'Descending' : 'Ascending'}</button>
+            <div className="status">{status}</div>
+            <button className="toggleButton" onClick={()=>this.toggleOrder()}>{this.state.isAscending ? 'Descending' : 'Ascending'}</button>
             <ol className={this.state.isAscending ? 'ascending' :'descending'}>{moves}</ol>
           </div>
         </div>
