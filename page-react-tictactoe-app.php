@@ -2,14 +2,6 @@
 /**
  * Template Name: React TicTacToe App Template
  */
-
-wp_register_script( 'my-script', 'tictactoe.js' );
-wp_enqueue_script( 'my-script' );
-$translation_array = array( 'templateUrl' => get_stylesheet_directory_uri('tictactoe.css') );
-//after wp_enqueue_script
-wp_localize_script( 'my-script', 'object_name', $translation_array );
-
-
 get_header();
 ?>
 
@@ -28,5 +20,4 @@ get_header();
 </main><!-- #site-content -->
 
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
-<script type="text/javascript" src="<?=get_template_directory_uri();?>/scripts/markers.js"></script>
 <?php get_footer(); ?>

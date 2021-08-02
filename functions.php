@@ -38,9 +38,23 @@ function my_theme_enqueue_styles() {
 }
 
 /** My modifications [START] */
-function enqueue_my_custom_script() {
+/*function enqueue_my_custom_script() {
     wp_enqueue_script( 'tictactoejs', '/src/tictactoe.js', false );
 }
 
-add_action( 'wp_enqueue_scripts', 'enqueue_my_custom_script' );
+add_action( 'wp_enqueue_scripts', 'enqueue_my_custom_script' );*/
+
+add_action( 'wp','tu_remove_header' );
+	function tu_remove_header() { 
+	if ( is_page_template(['page-react-tictactoe-app.php', 'page-react-vote-app.php']) ) {
+		remove_action( 'generate_header','generate_construct_header' );
+	}
+	}
+
+	add_action( 'wp','tu_remove_footer' );
+	function tu_remove_footer() {
+		if ( is_page_template(['page-react-tictactoe-app.php', 'page-react-vote-app.php']) ) {
+			remove_action( 'generate_footer','generate_construct_footer' );
+		}
+	}
 /** My modifications [END] */
