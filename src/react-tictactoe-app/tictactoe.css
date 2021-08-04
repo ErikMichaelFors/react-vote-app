@@ -3,6 +3,26 @@ body {
   margin: 20px;
 }
 
+/*Structure*/
+div#react-tictactoe-app {
+  width: calc(100vw - 40px);
+}
+.game {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.game-board, .game-info {
+  width: calc(50vw - 20px);
+}
+.square {
+  width: calc((50vw - 40px) / 3);
+  height: calc((50vw - 40px) / 3);
+  box-sizing: content-box;
+}
+
+
+
 ol, ul {
   padding-left: 30px;
 }
@@ -24,6 +44,7 @@ ol, ul {
 
 .status {
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 .square {
@@ -33,13 +54,14 @@ ol, ul {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  /*height: 34px;*/
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  /*width: 34px;*/
   color: black;
+  font-size: 12.5vw;
 }
 
 .square:hover {
@@ -60,44 +82,48 @@ button.square.winning-square {
   background: #ddd;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
+
+
+
+
+
+
+
+
+.toggleButton {
+  margin: 0.5em 0 0.5em 0;
+  width: 100%;
 }
 
-.game-info {
-  margin-left: 20px;
-}
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
-  div#react-tictactoe-app {
-      margin-top: 20px;
-  }
-
-  .game {
-      flex-direction: column;
-  }
-  .square {
-      width: calc((99vw - 40px) / 3);
-      height: calc((99vw - 40px) / 3);
-      box-sizing: content-box;
-  }
 
   .status {
       text-align: center;
       font-size: 2em;
   }
 
-  .toggleButton {
-      margin: 0.5em 0 0.5em 0;
-      width: 100%;
-  }
-
-  .game-info {
-      margin-left: 0px;
-  }
-
   ol {
       padding-left: 0px;
     }
+
+  .game {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .game-board, .game-info {
+    width: 100%;
+  }
+  .square {
+    width: calc((99vw - 40px) / 3);
+    height: calc((99vw - 40px) / 3);
+    box-sizing: content-box;
+    font-size: 25vw;
+  }
 }
